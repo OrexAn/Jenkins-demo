@@ -1,0 +1,21 @@
+plugins {
+    id 'base'
+    id "com.palantir.docker" version "0.36.0"
+    id "com.palantir.docker-run" version "0.36.0"
+    id "pl.allegro.tech.build.axion-release" version "1.18.14"
+}
+
+project.version = scmVersion.version
+
+docker {
+    name "${project.name.toLowerCase()}:${project.version.toLowerCase()}"
+    files "plugins.txt"
+}
+
+dockerRun {
+    name "${project.name}"
+    image "${project.name.toLowerCase()}:${project.version.toLowerCase()}"
+    ports '8080:8080'
+    clean true
+    daemonize false
+}
