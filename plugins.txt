@@ -2,3 +2,6 @@ authorize-project:1.8.1
 job-dsl:1.90
 workflow-aggregator:2.6
 git:5.6.0
+maven-plugin:3.24
+pipeline-maven:1457.vf7a_de13b_c0d4
+pipeline-utility-steps:2.18.0
