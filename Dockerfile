@@ -8,4 +8,6 @@ RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 
 COPY seedJob.xml /usr/share/jenkins/ref/jobs/seed-job/config.xml
 
+COPY maven.xml /var/jenkins_home/hudson.tasks.Maven.xml
+
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
