@@ -6,3 +6,18 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+
+pipelineJob('product-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/OrexAn/JenkinsTest'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
