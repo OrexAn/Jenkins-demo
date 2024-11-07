@@ -1,3 +1,18 @@
+pipelineJob('product-green-main-branch-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/OrexAn/JenkinsTest'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
+
 pipelineJob('product-fail-checkstyle-branch-job') {
     definition {
         cpsScm {
