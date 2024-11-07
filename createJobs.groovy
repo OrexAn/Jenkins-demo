@@ -1,12 +1,3 @@
-pipelineJob('pipelineJob') {
-    definition {
-        cps {
-            script( readFileFromWorkspace('pipelineJob.groovy') )
-            sandbox()
-        }
-    }
-}
-
 pipelineJob('product-fail-checkstyle-branch-job') {
     definition {
         cpsScm {
