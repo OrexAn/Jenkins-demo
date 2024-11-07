@@ -4,7 +4,7 @@ pipeline {
         stage('Trigger Job on Start') {
             steps {
                 script {
-                    build job: 'pipelineJob', wait: false
+                    build job: 'seedJob', wait: false
                 }
             }
         }

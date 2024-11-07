@@ -9,7 +9,7 @@ project.version = scmVersion.version
 
 docker {
     name "${project.name.toLowerCase()}:${project.version.toLowerCase()}"
-    files "plugins.txt", "seedJob.xml", "maven.xml", "starterPipeline.xml"
+    files "plugins.txt", "seedJob.xml", "maven.xml"
 }
 
 dockerRun {
